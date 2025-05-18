@@ -45,7 +45,7 @@ layout = dbc.Container(
                     dbc.CardBody([
                         html.H4(f"{df['Brand'].nunique()}", className="card-title"),
                         html.P("Brands represented", className="card-text"),
-                    ]), color="secondary", inverse=True
+                    ]), color="info", inverse=True
                 ), lg=3),
                 dbc.Col(dbc.Card(
                     dbc.CardBody([
