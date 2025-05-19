@@ -8,7 +8,7 @@ import plotly.figure_factory as ff
 import plotly.graph_objects as go
 from dash import dcc, html, Input, Output
 
-dash.register_page(__name__, path="/deep-dive", name="Deep-Dive (Extended)")
+dash.register_page(__name__, path="/deep-dive", name="Deep-Dive")
 
 df = pd.read_csv(Path(__file__).parents[1] / "car_sales_dataset.csv", parse_dates=["Sale Date"])
 df["Sale Month"] = df["Sale Date"].dt.to_period("M").dt.to_timestamp()
