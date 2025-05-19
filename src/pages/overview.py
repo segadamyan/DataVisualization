@@ -45,7 +45,7 @@ layout = dbc.Container(
                     dbc.CardBody([
                         html.H4(f"{df['Brand'].nunique()}", className="card-title"),
                         html.P("Brands represented", className="card-text"),
-                    ]), color="info", inverse=True
+                    ]), color="primary", inverse=True
                 ), lg=3),
                 dbc.Col(dbc.Card(
                     dbc.CardBody([
@@ -77,6 +77,13 @@ implying a move toward higher-trim vehicles.
                 ), width=12
             )
         ),
+        html.Hr(),
+        html.H5("Dataset preview (first 5 rows)", className="mt-4"),
+        html.Div(
+            dbc.Table.from_dataframe(df.head(), striped=True, bordered=True, hover=True, className="small"),
+            className="table-responsive"
+        )
+
     ],
     className="pt-4",
     fluid=True,
